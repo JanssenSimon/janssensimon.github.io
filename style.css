@@ -1,0 +1,21 @@
+body {
+  background-color: FloralWhite;
+  color: Black;
+  font-family: 'Nunito Sans', sans-serif;
+  width: min(100%, 42em);
+  margin: auto;
+  line-height: 1.6;
+}
+
+#resultats {
+  width: min(100%, 36em);
+  margin: auto;
+  border: 0.06em solid black;
+  border-radius: 1em;
+  padding: 2em;
+} 
+
+#comparaison {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}

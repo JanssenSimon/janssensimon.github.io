@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <html lang="fr-CA">
+    <title>Résultat sondage</title>
+    <meta name="author" content="Simon Janssen, simon.janssen@umontreal.ca">
+    <meta name="description" content="Résultat d'un sondage anonyme et informel fait par l'AÉDIROUM auprès de ces membres et d'autres étudiants en fin mars 2022 pour quantifier les cas de COVID19.">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js" integrity="sha256-ErZ09KkZnzjpqcane4SCyyHsKAXMvID9/xwbl/Aq1pc=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+        <h1>Sondage COVID de mars 2022</h1>
+    </header>
+    <main>
+      <section id="intro">
+        <h1>Introduction</h1>
+        <p>L'association étudiante du département d'informatique et de recherche opérationnelle de l'Université de Montréal (AÉDIROUM) a fait un sondage auprès des étudiants qu'elle représente et des gens de leur entourage afin de quantifier l'étendue de la vague la plus récente de la COVID. Plusieurs étudiants de d'autres départements ont aussi répondu au sondage, mais pas en assez grand nombre pour tirer des conclusions substantielles. En tout, il y a eu plus de 250 réponses dont plus de 80% viennent d'étudiants du DIRO. Voici une présentation des réponses du sondage.</p>
+      </section>
+      <section id="content">
+        <h1>Résultats du sondage</h1>
+        <section id="resultats">
+          <article>
+            <h3>Les étudiants grandement affectés par cette vague</h3>
+            <div id="comparaison">
+            <figure>
+              <canvas id="covid2022chart" width="150" height="150"></canvas>
+              <figcaption>Fig1. - Étudiants ayant eu la COVID depuis le début de 2022</figcaption>
+            </figure>
+            <figure>
+              <canvas id="covidpre2022chart" width="150" height="150"></canvas>
+              <figcaption>Fig2. - Étudiants ayant eu la COVID avant 2022</figcaption>
+            </figure>
+            </div>
+            <p>Selon nos données, plus d'étudiants ont été atteint de la COVID depuis le début de 2022 que pendant toute la pandémie avant 2022. De plus, dans les 10 derniers jours, nous voyons une hausse considérable de nouveaux tests positifs.</p>
+            <figure>
+              <canvas id="covid2022barchart"></canvas>
+              <figcaption>Fig3. - Nombres de tests positifs par 10 jours</figcaption>
+            </figure>
+          </article>
+          <article>
+            <h3>Les étudiants vaccinés</h3>
+            <figure>
+              <canvas id="vaccinationchart"></canvas>
+              <figcaption>Fig4. - Répartition des étudiants par nombre de vaccins</figcaption>
+            </figure>
+            <p>La grande majorité des étudiants est vaccinée mais il reste environ un tiers des étudiants qui n'ont pas eu la dose de rappel.</p>
+          </article>
+          <article>
+            <h3>Les étudiants sans recours</h3>
+            <figure>
+              <canvas id="recourschart"></canvas>
+              <figcaption>Fig4. - Répartition des étudiants par disponibilité des mesures d'accomodements</figcaption>
+            </figure>
+            <p>Environ un tiers des étudiants rapporte ne pas avoir recours à des mesures d'accomodements de la part de plus que la moitié de leurs enseignants. Nous avons reçu des messages d'étudiants anonymes qui admettent qu'ils iront en classe malgré un test positif tant qu'ils n'auront pas le support de leurs professeurs.</p>
+          </article>
+        </section>
+      </section>
+    </main>
+    <footer>
+      <p>Auteur: Simon Janssen au nom de l'AÉDIROUM<br><a href="mailto:aediroum@iro.umontreal.ca">Contact: aediroum@iro.umontreal.ca</a></p>
+    </footer>
+    <script src="resultats.js"></script>
+    <script src="displaygraphs.js"></script>
+  </body>
+</html>
