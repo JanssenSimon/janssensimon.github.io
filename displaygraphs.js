@@ -109,7 +109,7 @@ var arraydedatesdepositifs = arraydedonnees.reduce(
 
 var breakdowndates = [];
 var dateslabels = [];
-const now = new Date();
+const now = new Date(2022, 2, 31);
 var upperbound = new Date(2022, 0, 1);
 for(var d = new Date(2022, 0, 1); d <= now; d.setDate(d.getDate()+10)) {
     dateslabels = dateslabels.concat([dateToString(d)]); //TODO faire jour du mois
