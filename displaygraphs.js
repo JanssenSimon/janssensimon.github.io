@@ -1,6 +1,7 @@
 arraydedonnees = CSVToArray(donnees);
 //console.log(arraydedonnees);
 
+Math.TAU = 2 * Math.PI;
 
 //---cas-de-covid-2022---//
 
@@ -35,6 +36,16 @@ var config = {
       title: {
         display: true,
         text: ["Avez vous testé positif","à la COVID depuis le début","de 2022?"],
+      },
+      tooltip: {
+        callbacks: {
+          footer: function(tooltipItems) {
+              var totalcircumference = 0;
+              tooltipItems.forEach(tooltipItem => totalcircumference += tooltipItem.element.circumference);
+              var percentage = Math.round(100 * totalcircumference / (Math.TAU));
+              return percentage + "%";
+          }
+        }
       },
       legend: {
         display: true,
@@ -80,6 +91,16 @@ var config = {
       title: {
         display: true,
         text: ["Avez vous testé positif","à la COVID avant 2022?"],
+      },
+      tooltip: {
+        callbacks: {
+          footer: function(tooltipItems) {
+              var totalcircumference = 0;
+              tooltipItems.forEach(tooltipItem => totalcircumference += tooltipItem.element.circumference);
+              var percentage = Math.round(100 * totalcircumference / (Math.TAU));
+              return percentage + "%";
+          }
+        }
       },
       legend: {
         display: true,
@@ -201,6 +222,16 @@ var config = {
         display: true,
         text: ["Êtes vous vacciné.e?"],
       },
+      tooltip: {
+        callbacks: {
+          footer: function(tooltipItems) {
+              var totalcircumference = 0;
+              tooltipItems.forEach(tooltipItem => totalcircumference += tooltipItem.element.circumference);
+              var percentage = Math.round(100 * totalcircumference / (Math.TAU));
+              return percentage + "%";
+          }
+        }
+      },
       legend: {
         display: true,
       }
@@ -255,6 +286,16 @@ var config = {
       title: {
         display: true,
         text: ["Vos enseignants offrent-ils des accomodements à leurs étudiants","qui doivent s'isoler?"],
+      },
+      tooltip: {
+        callbacks: {
+          footer: function(tooltipItems) {
+              var totalcircumference = 0;
+              tooltipItems.forEach(tooltipItem => totalcircumference += tooltipItem.element.circumference);
+              var percentage = Math.round(100 * totalcircumference / (Math.TAU));
+              return percentage + "%";
+          }
+        }
       },
       legend: {
         display: true,
